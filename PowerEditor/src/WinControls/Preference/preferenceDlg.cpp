@@ -195,12 +195,15 @@ INT_PTR CALLBACK PreferenceDlg::run_dlgProc(UINT message, WPARAM wParam, LPARAM 
 			_settingsOnCloudDlg.reSizeTo(rc);
 			_searchEngineDlg.reSizeTo(rc);
 
+			HWND hPreferenceItemsListbox = ::GetDlgItem(_hSelf, IDC_LIST_DLGTITLE);
+			HWND hSetFocusResult = ::SetFocus(hPreferenceItemsListbox);
+
 			NppParameters& nppParam = NppParameters::getInstance();
 			ETDTProc enableDlgTheme = (ETDTProc)nppParam.getEnableThemeDlgTexture();
 			if (enableDlgTheme)
 				enableDlgTheme(_hSelf, ETDT_ENABLETAB);
 
-			return TRUE;
+			return FALSE;
 		}
 
 		case WM_COMMAND :

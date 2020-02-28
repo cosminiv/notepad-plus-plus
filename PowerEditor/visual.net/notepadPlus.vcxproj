@@ -101,7 +101,7 @@
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SmallerTypeCheck>false</SmallerTypeCheck>
@@ -675,7 +675,6 @@ copy ..\src\contextMenu.xml ..\bin64\contextMenu.xml
     <ClInclude Include="..\src\WinControls\ReadDirectoryChanges\ReadDirectoryChangesPrivate.h" />
     <ClInclude Include="..\src\WinControls\ReadDirectoryChanges\ThreadSafeQueue.h" />
     <ClInclude Include="..\src\WinControls\ReadDirectoryChanges\ReadFileChanges.h" />
-	
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="..\src\notepad++.exe.manifest" />
